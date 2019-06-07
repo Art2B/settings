@@ -1,0 +1,3 @@
+#!/bin/bash
+# Deleted merged branch
+git branch -d $(git branch --merged=origin/develop | tr "\n" " " | sed \'s/* //g\' | sed \'s/develop //g\')

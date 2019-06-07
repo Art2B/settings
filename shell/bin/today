@@ -1,0 +1,3 @@
+#!/bin/bash
+# List commit made on a date. Date format: YYYY-MM-DD
+git reflog --date=iso | grep $1 | grep commit

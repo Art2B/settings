@@ -6,7 +6,11 @@ Compilation of personnal settings for my code and computer use for development.
 Software I need and love to have.
 
 * Sublime text 3
+  * Package control
 * Nvm
+* Zsh
+  * iTerm for Mac
+* Postman
 
 ## Install
 

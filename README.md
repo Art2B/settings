@@ -11,6 +11,7 @@ Software I need and love to have.
 * Zsh
   * iTerm for Mac
 * Postman
+* Parcel
 
 ## Install
 

@@ -12,6 +12,8 @@ Software I need and love to have.
   * iTerm for Mac
 * Postman
 * Parcel
+* Vim
+  * pathogen.vim
 
 ## Install
 

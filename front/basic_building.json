@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "MODULE DESCRIPTION",
   "scripts": {
-    "build": "npm run build:js && npm run build:css",
+    "build": "npm-run-all -s build:*",
     "prebuild:css": "npm run format:css",
     "build:css": "node-sass --source-map true --include-path ./node_modules $npm_package_config_styles_entry $npm_package_config_styles_output",
-    "postbuild:css": "postcss --use autoprefixer --no-map.inline --autoprefixer.browsers 'IE 11, > 1%' $npm_package_config_styles_output -o $npm_package_config_styles_output",
+    "postbuild:css": "postcss $npm_package_config_styles_output -o $npm_package_config_styles_output",
+    "format:css": "stylefmt --recursive  $npm_package_config_styles_format",
     "prebuild:js": "npm run format:js",
     "build:js": "browserify $npm_package_config_scripts_entry -o $npm_package_config_scripts_output",
-    "format:js": "prettier --single-quote --trailing-comma=all --write $npm_package_config_scripts_format",
-    "format:css": "stylefmt --recursive  $npm_package_config_styles_format",
+    "format:js": "prettier --write $npm_package_config_scripts_format",
     "watch:js": "chokidar $npm_package_config_scripts_directory -c 'npm run build:js' --initial",
     "watch:css": "chokidar $npm_package_config_styles_directory -c 'npm run build:css' --initial",
     "start": "npm-run-all -p watch:*"
@@ -30,6 +30,14 @@
       ]
     ]
   },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead",
+    "IE 9",
+    "IE 10"
+  ],
   "config": {
     "scripts": {
       "directory": "./js/",
@@ -49,7 +57,6 @@
     "format:js"
   ],
   "dependencies": {
-    "catchify": "github:catchdigital/catchify#2.0.0",
   },
   "devDependencies": {
     "autoprefixer": "^9.1.3",

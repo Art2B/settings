@@ -14,7 +14,7 @@ Software I need and love to have.
 * Parcel
 * Vim
   * pathogen.vim
-* (Cheatsheet)[https://mediaatelier.com/CheatSheet/]
+* [Cheatsheet](https://mediaatelier.com/CheatSheet/)
 
 ## Install
 
